@@ -1,6 +1,6 @@
 # snap-shot-jsdom-test
 
-> Jest compatibility with [snap-shot][snap-shot] test project
+> jsdom example for [snap-shot][snap-shot] project
 
 [![Build status][ci-image] ][ci-url]
 
