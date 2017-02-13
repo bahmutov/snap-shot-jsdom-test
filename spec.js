@@ -2,6 +2,7 @@ const la = require('lazy-ass')
 const elementToJson = require('@wildpeaks/snapshot-dom').toJSON
 const clean = require('clean-html').clean
 const snapshot = require('snap-shot')
+const disparity = require('disparity')
 
 const pretty = html => {
   let result
@@ -35,5 +36,12 @@ describe('snap-shot DOM', function () {
     const div = document.createElement('div')
     div.innerHTML = '<div class="hello"><div id="message">Hello World</div></div>'
     snapshot(pretty(div.innerHTML))
+  })
+
+  it.skip('can show good text diff', () => {
+    const a = pretty('<div class="hello"><div id="message">Hello World</div></div>')
+    const b = pretty('<div class="hello"><div id="message">Hello World 2</div></div>')
+    const diff = disparity.unified(a, b)
+    console.log(diff)
   })
 })
