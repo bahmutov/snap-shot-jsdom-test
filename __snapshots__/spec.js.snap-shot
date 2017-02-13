@@ -1,0 +1,22 @@
+exports['can serialize div 1'] = {
+  "tagName": "div",
+  "childNodes": [
+    {
+      "tagName": "p",
+      "attributes": {
+        "class": "hello"
+      },
+      "childNodes": [
+        {
+          "nodeName": "#text",
+          "nodeValue": "Hello World"
+        }
+      ]
+    }
+  ]
+}
+
+exports['can serialize div 2'] = "<p class=\"hello\">Hello World</p>"
+
+exports['can serialize div using js-beautify.html 1'] = "<div class=\"hello\">\n  <div id=\"message\">Hello World</div>\n</div>"
+
